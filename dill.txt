@@ -1,0 +1,33 @@
+print("===PROGRAM KASIR SEDERHANA===")
+harga = int(input("Masukin Harga Barang: Rp "))
+jumlah = int(input("Masukan Jumlah Barang :"))
+
+total = harga*jumlah
+
+print("Total harga: Rp", total)
+
+#percabangan diskon 
+if total >=100000:
+    diskon = total*10/100
+elif total >= 50000:
+    diskon = total*5/100
+else:
+    diskon = 0
+    
+total_bayar = total - diskon
+print("\n===STRUK BELANJA===")
+print("Total Harga Rp", total)
+print("diskon Rp", int(diskon))
+print("Total pembayaran: Rp", total_bayar)
+
+#kembalian
+uang = int(input("Masukan Uang pembayaran:"))
+if uang >= total_bayar:
+    kembalian = uang - total_bayar 
+    print("Uang Pembayaran: Rp", uang)
+    print("Kembalian: Rp", int(kembalian))
+else:
+    Kekurangan = total_bayar - uang
+    print("Uang tidak cukup")
+    print("kekurangan: Rp", int(kekurangan))
+    
